@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblDownload = new System.Windows.Forms.Button();
+            this.txtNameFile = new System.Windows.Forms.TextBox();
             this.lblNameFile = new System.Windows.Forms.Label();
             this.lbBudgetConsole = new System.Windows.Forms.ListBox();
             this.btnChoice2 = new System.Windows.Forms.Button();
@@ -47,8 +47,8 @@
             this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlMain.Controls.Add(this.button1);
-            this.pnlMain.Controls.Add(this.textBox1);
+            this.pnlMain.Controls.Add(this.lblDownload);
+            this.pnlMain.Controls.Add(this.txtNameFile);
             this.pnlMain.Controls.Add(this.lblNameFile);
             this.pnlMain.Controls.Add(this.lbBudgetConsole);
             this.pnlMain.Controls.Add(this.btnChoice2);
@@ -62,25 +62,26 @@
             this.pnlMain.Size = new System.Drawing.Size(660, 637);
             this.pnlMain.TabIndex = 0;
             // 
-            // button1
+            // lblDownload
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(212, 530);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(231, 89);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Download";
-            this.button1.UseVisualStyleBackColor = false;
+            this.lblDownload.BackColor = System.Drawing.Color.Transparent;
+            this.lblDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDownload.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDownload.Location = new System.Drawing.Point(212, 530);
+            this.lblDownload.Name = "lblDownload";
+            this.lblDownload.Size = new System.Drawing.Size(231, 89);
+            this.lblDownload.TabIndex = 9;
+            this.lblDownload.Text = "Download";
+            this.lblDownload.UseVisualStyleBackColor = false;
+            this.lblDownload.Click += new System.EventHandler(this.lblDownload_Click);
             // 
-            // textBox1
+            // txtNameFile
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F);
-            this.textBox1.Location = new System.Drawing.Point(212, 456);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(231, 40);
-            this.textBox1.TabIndex = 8;
+            this.txtNameFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F);
+            this.txtNameFile.Location = new System.Drawing.Point(212, 456);
+            this.txtNameFile.Name = "txtNameFile";
+            this.txtNameFile.Size = new System.Drawing.Size(231, 40);
+            this.txtNameFile.TabIndex = 8;
             // 
             // lblNameFile
             // 
@@ -96,6 +97,7 @@
             // lbBudgetConsole
             // 
             this.lbBudgetConsole.FormattingEnabled = true;
+            this.lbBudgetConsole.HorizontalScrollbar = true;
             this.lbBudgetConsole.Location = new System.Drawing.Point(212, 200);
             this.lbBudgetConsole.Name = "lbBudgetConsole";
             this.lbBudgetConsole.Size = new System.Drawing.Size(231, 186);
@@ -183,8 +185,8 @@
         private System.Windows.Forms.TextBox txtFirstChoice;
         private System.Windows.Forms.ListBox lbBudgetConsole;
         private System.Windows.Forms.Label lblNameFile;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button lblDownload;
+        private System.Windows.Forms.TextBox txtNameFile;
     }
 }
 
