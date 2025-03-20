@@ -56,13 +56,14 @@ namespace Duplicate_Checker_GUI
 
         private void lblDownload_Click(object sender, EventArgs e)
         {
+            //Checks if the textboxes are empty if so then pushes a messagebox otherwise it goes to the Filereader
             if (!string.IsNullOrEmpty(txtFirstChoice.Text) && !string.IsNullOrEmpty(txtSecondChoice.Text) && !string.IsNullOrEmpty(txtNameFile.Text))
             {
                 fileReader(firstFile, secondFile, txtNameFile.Text);
             }
             else
             {
-                MessageBox.Show("Selecteer een file alstublieft.");
+                MessageBox.Show("Please select a file.");
             }
         }
 
