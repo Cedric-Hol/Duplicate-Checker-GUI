@@ -56,6 +56,7 @@ namespace Duplicate_Checker_GUI
 
         private void lblDownload_Click(object sender, EventArgs e)
         {
+            lbBudgetConsole.Items.Clear();
             //Checks if the textboxes are empty if so then pushes a messagebox otherwise it goes to the Filereader
             if (!string.IsNullOrEmpty(txtFirstChoice.Text) && !string.IsNullOrEmpty(txtSecondChoice.Text) && !string.IsNullOrEmpty(txtNameFile.Text))
             {
@@ -69,6 +70,7 @@ namespace Duplicate_Checker_GUI
 
         private void btnCheckFile_Click(object sender, EventArgs e)
         {
+            lbBudgetConsole.Items.Clear();
             if (!string.IsNullOrEmpty(txtFirstChoice.Text) && !string.IsNullOrEmpty(txtSecondChoice.Text))
             {
                 fileReader(firstFile, secondFile, txtNameFile.Text);
