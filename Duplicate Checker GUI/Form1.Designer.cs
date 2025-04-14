@@ -39,6 +39,7 @@
             this.txtSecondChoice = new System.Windows.Forms.TextBox();
             this.txtFirstChoice = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnCheckFile = new System.Windows.Forms.Button();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             this.pnlMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlMain.Controls.Add(this.btnCheckFile);
             this.pnlMain.Controls.Add(this.lblDownload);
             this.pnlMain.Controls.Add(this.txtNameFile);
             this.pnlMain.Controls.Add(this.lblNameFile);
@@ -67,7 +69,7 @@
             this.lblDownload.BackColor = System.Drawing.Color.Transparent;
             this.lblDownload.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDownload.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDownload.Location = new System.Drawing.Point(212, 530);
+            this.lblDownload.Location = new System.Drawing.Point(93, 516);
             this.lblDownload.Name = "lblDownload";
             this.lblDownload.Size = new System.Drawing.Size(231, 89);
             this.lblDownload.TabIndex = 9;
@@ -78,7 +80,7 @@
             // txtNameFile
             // 
             this.txtNameFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F);
-            this.txtNameFile.Location = new System.Drawing.Point(212, 456);
+            this.txtNameFile.Location = new System.Drawing.Point(93, 442);
             this.txtNameFile.Name = "txtNameFile";
             this.txtNameFile.Size = new System.Drawing.Size(231, 40);
             this.txtNameFile.TabIndex = 8;
@@ -88,7 +90,7 @@
             this.lblNameFile.AutoSize = true;
             this.lblNameFile.BackColor = System.Drawing.Color.Transparent;
             this.lblNameFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F);
-            this.lblNameFile.Location = new System.Drawing.Point(221, 403);
+            this.lblNameFile.Location = new System.Drawing.Point(102, 389);
             this.lblNameFile.Name = "lblNameFile";
             this.lblNameFile.Size = new System.Drawing.Size(212, 33);
             this.lblNameFile.TabIndex = 7;
@@ -157,6 +159,19 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Duplicate Checker";
             // 
+            // btnCheckFile
+            // 
+            this.btnCheckFile.BackColor = System.Drawing.Color.Transparent;
+            this.btnCheckFile.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCheckFile.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCheckFile.Location = new System.Drawing.Point(336, 516);
+            this.btnCheckFile.Name = "btnCheckFile";
+            this.btnCheckFile.Size = new System.Drawing.Size(231, 89);
+            this.btnCheckFile.TabIndex = 10;
+            this.btnCheckFile.Text = "Check File";
+            this.btnCheckFile.UseVisualStyleBackColor = false;
+            this.btnCheckFile.Click += new System.EventHandler(this.btnCheckFile_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +202,7 @@
         private System.Windows.Forms.Label lblNameFile;
         private System.Windows.Forms.Button lblDownload;
         private System.Windows.Forms.TextBox txtNameFile;
+        private System.Windows.Forms.Button btnCheckFile;
     }
 }
 

@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Duplicate_Checker_GUI
 {
-    public partial class frmMain: Form
+    public partial class frmMain : Form
     {
         public string firstFile, secondFile;
         public frmMain()
@@ -27,7 +27,7 @@ namespace Duplicate_Checker_GUI
                 openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
                 openFileDialog.Title = "Select a Text File";
 
-                if(openFileDialog.ShowDialog() == DialogResult.OK)
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     string filePath = openFileDialog.FileName;
                     firstFile = filePath;
@@ -67,6 +67,18 @@ namespace Duplicate_Checker_GUI
             }
         }
 
+        private void btnCheckFile_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtFirstChoice.Text) && !string.IsNullOrEmpty(txtSecondChoice.Text))
+            {
+                fileReader(firstFile, secondFile, txtNameFile.Text);
+            }
+            else
+            {
+                MessageBox.Show("Please select a file or enter a name.");
+            }
+        }
+
         private async Task fileReader(string first, string second, string name)
         {
             List<string> firstItems = new List<string>();
@@ -74,12 +86,12 @@ namespace Duplicate_Checker_GUI
             List<string> finalList = new List<string>();
             const Int32 BufferSize = 512;
 
-            using(var firstFilestream = File.OpenRead(first))
+            using (var firstFilestream = File.OpenRead(first))
             {
                 using (var streamReader = new StreamReader(firstFilestream, Encoding.UTF8, true, BufferSize))
                 {
                     String line;
-                    while((line = streamReader.ReadLine()) != null)
+                    while ((line = streamReader.ReadLine()) != null)
                     {
                         firstItems.Add(line);
                     }
@@ -112,13 +124,18 @@ namespace Duplicate_Checker_GUI
                 }
             }
 
-            string saveFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            TextWriter writer = new StreamWriter($"{saveFilePath}\\{name}.txt");
-            foreach(string firstItem in finalList)
+            if (txtNameFile.Text == string.Empty) { }
+
+            else
             {
-                writer.WriteLine(firstItem);
+                string saveFilePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                TextWriter writer = new StreamWriter($"{saveFilePath}\\{name}.txt");
+                foreach (string firstItem in finalList)
+                {
+                    writer.WriteLine(firstItem);
+                }
+                writer.Close();
             }
-            writer.Close();
         }
     }
 }
